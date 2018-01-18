@@ -108,7 +108,7 @@ class PostDetail extends Component {
     if (!post.id || post.deleted) {
       return (
           <div className='post'>
-            <h3>Page Not Found</h3>
+            <h3>404: Page Not Found</h3>
             <p>The post you are looking for may have been deleted.</p>
           </div>
       )
