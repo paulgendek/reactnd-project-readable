@@ -1,4 +1,6 @@
 body {
+  background: #efefef;
+  color: #1e1e1e;
   font-family: sans-serif;
 }
 
@@ -27,6 +29,7 @@ a:hover {
 
 .post-body,
 .comment-body {
+  background: #fff;
   border: 1px solid #ccc;
   padding: 10px;
 }
