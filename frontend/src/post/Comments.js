@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { humanDate } from '../utils/helpers'
-import * as API from "../utils/api";
-import * as action from "../actions";
+import { humanDate } from '../app/helpers'
+import * as API from "../app/api";
+import * as action from "./actions";
 import uuid from "uuid/v4";
 import Modal from 'react-modal'
 import AddIcon from 'react-icons/lib/fa/plus-circle'
@@ -171,10 +171,8 @@ class Comments extends Component {
   }
 };
 
-function mapStateToProps(state) {
-  return {
-    post: state.post
-  }
+function mapStateToProps({post}) {
+  return { post }
 }
 
 function mapDispatchToProps(dispatch) {

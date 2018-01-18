@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import * as API from '../utils/api'
+import * as API from './api'
 import { Switch, Route, Link, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
-import * as action from '../actions'
-import PostsList from './PostsList'
-import PostDetail from './PostDetail'
+import * as action from '../categories/actions'
+import PostsList from '../posts/PostsList'
+import PostDetail from '../post/PostDetail'
+import CategoryList from '../categories/CategoryList';
 
 class App extends Component {
   componentDidMount() {
@@ -17,13 +18,7 @@ class App extends Component {
     return (
       <div className='container'>
         <h1><Link to="/">Readable</Link></h1>
-        <div className='categories'>
-          <ul>
-            {categories.map((category) => (
-                <li key={category.name}><Link to={`/${category.path}`}>{category.name}</Link></li>
-            ))}
-          </ul>
-        </div>
+        <CategoryList categories={categories} />
 
         <Switch>
           <Route path="/" exact component={PostsList} />
@@ -35,12 +30,8 @@ class App extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    categories: state.categories,
-    posts: state.posts,
-    post: state.post,
-  }
+function mapStateToProps({categories, posts, post}) {
+  return { categories, posts, post }
 }
 
 function mapDispatchToProps(dispatch) {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { humanDate } from '../utils/helpers'
+import { humanDate } from '../app/helpers'
 
 const PostBrief = ({post}) => {
   return (

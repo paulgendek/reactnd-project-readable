@@ -2,10 +2,9 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import Comments from './Comments'
-import * as API from "../utils/api";
-import * as action from "../actions";
-import { humanDate } from '../utils/helpers'
-import { Route } from 'react-router-dom'
+import * as API from "../app/api";
+import * as action from "./actions";
+import { humanDate } from '../app/helpers'
 import uuid from "uuid/v4";
 import Modal from 'react-modal'
 import ArrowRightIcon from 'react-icons/lib/fa/arrow-circle-right'
@@ -194,11 +193,8 @@ class PostDetail extends Component {
   }
 };
 
-function mapStateToProps(state) {
-  return {
-    categories: state.categories,
-    post: state.post
-  }
+function mapStateToProps({categories, post}) {
+  return { categories, post }
 }
 
 function mapDispatchToProps(dispatch) {
