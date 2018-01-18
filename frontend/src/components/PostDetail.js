@@ -5,6 +5,7 @@ import Comments from './Comments'
 import * as API from "../utils/api";
 import * as action from "../actions";
 import { humanDate } from '../utils/helpers'
+import { Route } from 'react-router-dom'
 import uuid from "uuid/v4";
 import Modal from 'react-modal'
 import ArrowRightIcon from 'react-icons/lib/fa/arrow-circle-right'
@@ -103,6 +104,15 @@ class PostDetail extends Component {
   render() {
     const { postModalOpen } = this.state;
     const { categories, post } = this.props;
+
+    if (!post.id || post.deleted) {
+      return (
+          <div className='post'>
+            <h3>Page Not Found</h3>
+            <p>The post you are looking for may have been deleted.</p>
+          </div>
+      )
+    }
 
     return (
         <div className='post'>
