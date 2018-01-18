@@ -1,0 +1,56 @@
+body {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.sort {
+  text-align: right;
+}
+
+.post-list,
+.comment-list {
+  list-style: none;
+  padding: 0;
+}
+
+.vote-controls {
+  float: left;
+  padding-right: 10px;
+}
+
+.post-body,
+.comment-body {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.add-comment {
+  float: right;
+  margin-top: -15px;
+}
+
+.ReactModal__Overlay {
+  background: rgba(0,0,0,0.3);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.ReactModal__Content {
+  background: #fff;
+  left: 0;
+  margin: 20px 5%;
+  padding: 5%;
+  position: absolute;
+  top: 50%;
+  width: 80%;
+}
