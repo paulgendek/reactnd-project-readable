@@ -12,7 +12,56 @@ a:hover {
   text-decoration: underline;
 }
 
+h1 {
+  line-height: 1;
+  margin: 0;
+}
+
+h1 a {
+  color: #9e0505;
+}
+
+h1 a:hover {
+  text-decoration: none;
+}
+
+.categories {
+  background: #ddd;
+  margin: 20px 0;
+  padding: 5px;
+}
+
+.categories ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categories li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.categories a {
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #0a9bd2;
+  display: block;
+  padding: 10px 20px;
+}
+
+.categories a:hover {
+  border-color: #1b9dec;
+  text-decoration: none;
+}
+
+.add-post {
+  float: left;
+  margin-top: -15px;
+}
+
 .sort {
+  font-size: 11px;
   text-align: right;
 }
 
@@ -25,6 +74,20 @@ a:hover {
 .vote-controls {
   float: left;
   padding-right: 10px;
+}
+
+.post-404 {
+  text-align: center;
+}
+
+.post h3 a {
+  color: #9e0505;
+}
+
+h4 {
+  clear: both;
+  margin: 20px 0 0 0;
+  text-align: center;
 }
 
 .post-body,

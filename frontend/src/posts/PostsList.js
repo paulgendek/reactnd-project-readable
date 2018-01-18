@@ -122,7 +122,7 @@ class PostsList extends Component {
               <AddIcon size={30}/> SUBMIT POST
             </button>
 
-            <h3>There are no posts.</h3>
+            <h4>There are no posts.</h4>
 
             <Modal
                 className='modal'
